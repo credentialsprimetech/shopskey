@@ -1,0 +1,271 @@
+.section {
+  background-image: url("https://shopskey.com/images/Homepagebigsection-3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  min-height: 100vh;
+  padding: 50px 20px;
+  color: white;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 80px;
+}
+
+.header h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: black;
+  width: 80%;
+}
+
+.highlight {
+  color: black;
+  font-weight: 700;
+  font-size: 1.2rem;
+  width: 50%;
+  min-width: 240px;
+}
+
+.viewMore {
+  color: #fc501b;
+  text-decoration: none;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.viewMore:hover {
+  transform: translateX(10px);
+}
+
+.content {
+  display: grid;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  position: relative;
+}
+
+.progressBar {
+  width: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  height: 100%;
+  margin-top: 20px;
+  position: relative;
+}
+
+.progressFill {
+  width: 100%;
+  background: linear-gradient(to bottom, white, #fc501b);
+  border-radius: 4px;
+  height: 0%;
+  transition: height 0.3s ease;
+}
+
+.stages {
+  position: relative;
+  z-index: 2;
+}
+
+.stage {
+  margin-bottom: 100px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+  padding: 40px 0;
+}
+
+.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.number {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+  font-weight: 600;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fc501b;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  max-width: 400px;
+}
+
+.imageContainer {
+  position: sticky;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 500px;
+  width: 400px;
+  margin: 0 auto;
+  perspective: 1000px;
+  transition: transform 0.6s ease;
+}
+
+.imageWrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  padding: 8px;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+.imageWrapper.active {
+  opacity: 1;
+  z-index: 3;
+}
+
+.imageContent {
+  width: 100%;
+  height: 100%;
+  border-radius: 40%;
+  background: #1a1a1a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.processImage {
+  width: 100%;
+  height: 100%;
+  border-radius: 40%;
+  object-fit: cover;
+  transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.imageWrapper:hover .processImage {
+  transform: scale(1.1);
+}
+
+.floatingElements {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dot {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fc501b;
+  border-radius: 50%;
+  opacity: 0.6;
+  animation: float 3s ease-in-out infinite;
+}
+
+.dot:nth-child(1) {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.dot:nth-child(2) {
+  top: 60%;
+  right: 15%;
+  animation-delay: 1s;
+}
+
+.dot:nth-child(3) {
+  bottom: 30%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ✅ Mobile Responsive */
+@media (max-width: 768px) {
+  .header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .header h1 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+      width: 100%;
+
+  }
+
+  .highlight {
+    font-size: 1rem;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .progressBar {
+    display: none;
+  }
+
+  .title {
+    font-size: 1.8rem;
+  }
+
+  .description {
+    max-width: 100%;
+    font-size: 1rem;
+  }
+
+  .imageContainer {
+    position: relative;
+    transform: none !important;
+    top: unset;
+    height: 300px;
+    width: 300px;
+  }
+
+  .imageContent {
+    border-radius: 30%;
+  }
+
+  .processImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 30%;
+  }
+}

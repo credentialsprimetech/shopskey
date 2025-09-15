@@ -1,0 +1,62 @@
+ .webagency1 {
+      background: url('https://shopskey.com/images/Web-and-App-Development.jpg') no-repeat center center/cover;
+      padding: 100px 20px;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+    }
+
+    .webagency1 .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .webagency1 .content-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      flex-wrap: wrap;
+    }
+
+    .webagency1 .left-image {
+      flex: 1 1 300px;
+      text-align: center;
+    }
+
+    .webagency1 .left-image img {
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    }
+
+    .webagency1 .right-content {
+      flex: 2 1 500px;
+    }
+
+    .webagency1 .right-content h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+      font-weight: 700;
+      color: white;
+    }
+
+    .webagency1 .right-content h1 span {
+      color: #FC501B;
+    }
+
+    .webagency1 .right-content p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      margin-bottom: 1rem;
+      color: #e0e0e0;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .webagency1 .content-wrapper {
+        flex-direction: column;
+      }
+
+      .webagency1 .right-content h1 {
+        font-size: 2rem;
+      }
+    }

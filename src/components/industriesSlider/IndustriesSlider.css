@@ -1,0 +1,40 @@
+/* Card default state */
+.typebox {
+  padding: 60px;
+  border: 2px solid red;
+  background: transparent;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover state */
+.typebox:hover {
+  background: #ff3d00;        /* card bg orange */
+  border: none;              /* border hat jaye */
+}
+
+/* Text default */
+.typebox .title-text {
+  color: red;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Text hover */
+.typebox:hover .title-text {
+  color: white;
+}
+
+/* Image box default */
+.typebox .box-img {
+  padding: 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Image box hover */
+.typebox:hover .box-img {
+  /* background: red;           bg red */
+}
+.huz-sider-industries .swiper-button-next,
+.huz-sider-industries .swiper-button-prev {
+  display: none !important;
+}

@@ -1,0 +1,104 @@
+
+    .sectcount1 {
+      padding-top: 80px;
+      padding-bottom: 80px;
+
+      background-color: #fff;
+    }
+
+    .sectcount1-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    /* Left Content */
+    .sectcount1-left {
+      flex: 1 1 60%;
+    }
+
+    .sectcount1-heading {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      color: #0b0b20;
+      margin-bottom: 1rem;
+
+    }
+
+    .sectcount1-description {
+      font-family: 'Poppins', sans-serif;
+      font-size: 18px;
+      color: #444;
+      line-height: 1.7;
+      margin-bottom: 2rem;
+    }
+
+    .sectcount1-stats {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .sectcount1-stat {
+      flex: 1 1 200px;
+    }
+
+    .sectcount1-counter {
+      font-family: 'Poppins', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #FC501B;
+      /* VIP orange */
+    }
+
+    .sectcount1-subtext {
+      font-family: 'Poppins', sans-serif;
+      font-size: 16px;
+      color: #000;
+      margin-top: 0.5rem;
+    }
+
+    /* Right Image */
+    .sectcount1-right {
+      flex: 1 1 35%;
+    }
+
+    .sectcount1-image-wrapper {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .sectcount1-image {
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .sectcount1-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .sectcount1-left,
+      .sectcount1-right {
+        flex: 1 1 100%;
+      }
+
+
+
+      .sectcount1-description {
+        font-size: 16px;
+      }
+
+      .sectcount1-stats {
+        justify-content: center;
+      }
+    }

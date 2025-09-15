@@ -1,0 +1,84 @@
+.request-form {
+  background-image: url(/images/Slider-form-image.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 22px 32px;
+  border-radius: 12px;
+  margin: 0 43px;
+  /*background: linear-gradient(115deg, #2d2d2d, #7b7b7b6b);*/
+  /* border-color: white; */
+  /* border: white; */
+  border-width: 1px;
+}
+
+.request-form button {
+  background: #ffffff;
+  padding: 9px 35px;
+  border-radius: 30px;
+  border: 0;
+  width: 100%;
+}
+.request-form textarea.form-control {
+  resize: none;
+  height: 100px !important;
+}
+.request-form textarea.form-control.form_xtra:focus,
+textarea.form-control:focus {
+  background: #fff !important;
+  color: #000;
+}
+.affordable-web-design .request-form {
+  position: relative;
+}
+.hero-form .request-form {
+  position: relative;
+  margin-top: 18px;
+}
+.hero-form .request-form {
+  box-shadow: -2px -1px 10px 7px #ffffff5c;
+  background: transparent;
+  border-radius: 0px;
+}
+.hero-form .request-form:after {
+  box-shadow: 0px 0px 7px 8px black;
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(45deg, #00c4ff, #ff000000);
+  top: 0;
+  right: 0;
+  z-index: -1;
+  /* transform: rotate(13deg); */
+  /* border-radius: 100%; */
+}
+
+h4.form-sub {
+  padding: 19px 0;
+  font-size: 21px;
+  line-height: 33px;
+}
+
+.form-group input,
+textarea {
+  background: #fff0;
+  padding: 6px 10px;
+}
+
+::placeholder {
+  color: #fff !important;
+}
+.request-form .form-group {
+  padding: 12px 0;
+  color: #fff !important;
+}
+.request-form textarea.form-control {
+  background: rgba(255, 255, 255, 0);
+}
+.form-control{
+    color: #fff !important;
+}
+.form-control:focus {
+  color: #000 !important    ; /* focus hone ke baad text black */
+}

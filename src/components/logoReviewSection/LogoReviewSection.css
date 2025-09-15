@@ -1,0 +1,109 @@
+ .chat-and-reviews {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      align-items: start;
+      gap: 20px;
+    }
+
+    .left-colbtn {
+      grid-column: span 3;
+      margin-top: -3%;
+      display: flex;
+      justify-content: flex-start;
+      margin-left: 10%;
+    }
+
+    .right-collogo {
+      grid-column: span 9;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      flex-wrap: wrap;
+      padding-top: 13px;
+      padding-bottom: 13px;
+      margin-left: 0.5%;
+      background-color: #f4f3f1;
+    }
+
+    .live-chat-btn {
+      background: #FC501B;
+      border-radius: 20px;
+      padding: 30px 40px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      font-size: 20px;
+      animation: pulse 1s linear infinite;
+      box-shadow: 0 0 12px rgba(220, 6, 3, 0.6);
+    }
+
+    .live-chat-btn img {
+      width: 30px;
+      height: 30px;
+    }
+
+    .review-logo {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-weight: 700;
+      color: #222;
+      font-size: 18px;
+      margin: 0px 25px;
+      margin-left: 5%;
+    }
+
+    .review-logo img {
+      max-height: 50px;
+      display: block;
+      margin: 0 auto;
+    }
+
+     @media (max-width: 768px) {
+      .logo-magic-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 15px;
+      }
+
+      .logo-magic-text,
+      .logo-magic-image {
+        width: 100%;
+        text-align: left;
+      }
+
+      .logo-magic-text h1 {
+        font-size: 24px;
+      }
+
+      .magic-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+      .chat-and-reviews {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 20px 15px;
+      }
+
+      .left-colbtn,
+      .right-collogo {
+        grid-column: span 12;
+        margin-left: 0;
+        justify-content: center;
+      }
+
+      .right-collogo {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+      }
+
+      .live-chat-btn {
+        padding: 20px 30px;
+        font-size: 18px;
+      }
+    }

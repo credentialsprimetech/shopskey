@@ -1,0 +1,120 @@
+.logo-magic-section {
+      background-size: 100% 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      min-height: 600px;
+      display: block;
+      padding-top: 4%;
+      padding-bottom: 4%;
+    }
+
+    .custom-white-text {
+      color: white;
+    }
+
+    .logo-magic-container {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-magic-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .logo-magic-text h3 {
+      font-size: 16px;
+      font-weight: 400;
+      color: white;
+    }
+
+    .logo-magic-text h1 {
+      font-size: 32px;
+      margin: 10px 0;
+      color: #ffffff;
+    }
+
+    .logo-magic-text .highlight {
+      color: #fc501b;
+    }
+
+    .logo-magic-text ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0;
+      color: white;
+    }
+
+    .logo-magic-text ul li::before {
+      content: "✓ ";
+      color: #00ff99;
+    }
+
+    .magic-btn {
+      background-color: #FC501B;
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 15px;
+      border-radius: 5px;
+    }
+
+    .logo-magic-image {
+      flex: 1;
+      min-width: 300px;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+
+    .logo-magic-image img {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 12px;
+    }
+
+    .magic-discount-tab {
+      position: fixed;
+      right: 0;
+      top: 35%;
+      background-color: #FC501B;
+      color: white;
+      padding: 10px 8px;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      font-weight: bold;
+      border-radius: 6px 0 0 6px;
+      z-index: 9999;
+      cursor: pointer;
+    }
+       @media (max-width: 768px) {
+      .logo-magic-container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0 15px;
+      }
+
+      .logo-magic-text,
+      .logo-magic-image {
+        width: 100%;
+        text-align: left;
+      }
+
+      .logo-magic-text h1 {
+        font-size: 24px;
+      }
+
+      .magic-btn {
+        padding: 10px 20px;
+        font-size: 16px;
+      }
+
+     
+    }
