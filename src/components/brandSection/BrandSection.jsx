@@ -1,6 +1,5 @@
 "use client";
 
-
 const BrandSection = ({ heading, imageSrc, altText, paragraphs }) => {
   return (
     <section className="cus-brand-section">
@@ -13,7 +12,10 @@ const BrandSection = ({ heading, imageSrc, altText, paragraphs }) => {
           </div>
           <div className="cus-col-text">
             {paragraphs.map((para, index) => (
-              <p key={index}>{para}</p>
+              <>
+                <p key={index}>{para}</p>
+                <br />
+              </>
             ))}
           </div>
         </div>
