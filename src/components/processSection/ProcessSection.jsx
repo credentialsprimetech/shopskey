@@ -14,11 +14,13 @@ export default function ProcessSection({
     const handleScroll = () => {
       const section = document.querySelector(`.${styles.section}`);
       const stagesDOM = document.querySelectorAll(`.${styles.stage}`);
-      const scrollY = window.scrollY + window.innerHeight / 2;
+      const scrollY = window.scrollY + window.innerHeight / 100;
+      console.log(scrollY);
 
       stagesDOM.forEach((stage, index) => {
         const offset = stage.offsetTop + section.offsetTop;
         if (scrollY >= offset) {
+          // stage.classList.add(styles.visible);
           setActiveStage(index);
         }
       });

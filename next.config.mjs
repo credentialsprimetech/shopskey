@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     domains: [
+      "www.shopskey.com",
       "shopskey.com",
       "maxinewilson.com",
       "cookiekpopmerch.com",

@@ -87,7 +87,10 @@
   transition: all 0.8s ease;
   padding: 40px 0;
 }
-
+.stage.visible {
+  opacity: 1 !important;
+  transform: translateY(0);
+}
 .active {
   opacity: 1;
   transform: translateY(0);
