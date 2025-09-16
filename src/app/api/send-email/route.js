@@ -1,4 +1,4 @@
-// src/app/api/send-proposal/route.js
+
 import nodemailer from "nodemailer";
 
 export async function POST(request) {
