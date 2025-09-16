@@ -60,13 +60,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/icomon.css" />
         <link rel="stylesheet" href="/assets/css/main.css"></link>
 
-        {/* <link rel="stylesheet" href="/css/boxicons.min.css" />
-        <link rel="stylesheet" href="/css/flaticon.css" />
-        <link rel="stylesheet" href="/css/bootstrap-icons.css" />
-        <link rel="stylesheet" href="/css/swiper-bundle.min.css" />
-        <link rel="stylesheet" href="/css/magnific-popup.min.css" />
-        <link rel="stylesheet" href="/css/odometer.css" />
-        <link rel="stylesheet" href="/css/bootstrap.min.css" /> */}
+ 
       </head>
       <body>
         <ModalProvider>
