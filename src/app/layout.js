@@ -96,7 +96,7 @@ export const metadata = {
 
   verification: {
     google: "KU814iANfI6OVHVGoCLupslE9aVJbFHXvtiCW0b6n5s",
-    // yandex: "your-yandex-verification-code",
+    yandex: "609cfcd8e39fb3c1",
     // yahoo: "your-yahoo-verification-code",
   },
 
