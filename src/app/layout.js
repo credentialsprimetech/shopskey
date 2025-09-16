@@ -135,7 +135,7 @@ export default function RootLayout({ children }) {
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}
+      className={`${poppins.variable}`}
     >
       <head>
         <meta
