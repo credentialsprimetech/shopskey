@@ -133,10 +133,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html
-      lang="en"
-      className={`${poppins.variable}`}
-    >
+    <html lang="en" className={`${poppins.variable}`}>
       <head>
         <meta
           name="google-site-verification"
@@ -148,15 +145,14 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="//static.zdassets.com" />
-        {/* <link rel="stylesheet" href="/assets/css/bootstrap.min.css" /> */}
-        <link rel="stylesheet" href="/assets/css/all.min.css" />
-        {/* <link rel="stylesheet" href="/assets/css/animate.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/magnific-popup.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/meanmenu.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/nice-select.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/icomon.css" /> */}
-        {/* <link rel="stylesheet" href="/assets/css/main.css"></link> */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-papNm6O+bSr5z5UB8nE9vrFica8tWHZcizxgxYkWwaRM42gnikI6jneih/7gToYtL6vhfVqlhK/SXxP+0U6FZw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer"
+        />
+
         {/* Preconnect */}
         <link
           rel="preconnect"
