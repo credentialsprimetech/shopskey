@@ -146,7 +146,15 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
         <link rel="dns-prefetch" href="//static.zdassets.com" />
-
+        <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/assets/css/all.min.css" />
+        <link rel="stylesheet" href="/assets/css/animate.css" />
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
+        <link rel="stylesheet" href="/assets/css/meanmenu.css" />
+        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+        <link rel="stylesheet" href="/assets/css/nice-select.css" />
+        <link rel="stylesheet" href="/assets/css/icomon.css" />
+        <link rel="stylesheet" href="/assets/css/main.css"></link>
         {/* Preconnect */}
         <link
           rel="preconnect"
