@@ -65,7 +65,6 @@ const nextConfig = {
 
   experimental: {
     scrollRestoration: true,
-    optimizeCss: true,
     optimizePackageImports: ["react-icons", "lodash", "swiper"],
     webVitalsAttribution: ["CLS", "LCP"],
     optimizeServerReact: true,

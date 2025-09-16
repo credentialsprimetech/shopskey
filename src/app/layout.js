@@ -96,8 +96,8 @@ export const metadata = {
 
   verification: {
     google: "KU814iANfI6OVHVGoCLupslE9aVJbFHXvtiCW0b6n5s",
-    yandex: "your-yandex-verification-code",
-    yahoo: "your-yahoo-verification-code",
+    // yandex: "your-yandex-verification-code",
+    // yahoo: "your-yahoo-verification-code",
   },
 
   alternates: {
@@ -181,7 +181,7 @@ export default function RootLayout({ children }) {
             rel="preload"
             href={`/assets/css/${css}`}
             as="style"
-            onLoad="this.onload=null;this.rel='stylesheet'"
+            // onLoad="this.onload=null;this.rel='stylesheet'"
           />
         ))}
         <noscript>

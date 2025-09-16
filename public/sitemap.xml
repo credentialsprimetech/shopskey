@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://shopskey.com/</loc>
-    <lastmod>2025-09-16</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://shopskey.com/services</loc>
-    <lastmod>2025-09-16</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <!-- Add all your pages -->
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<sitemap><loc>https://shopskey.com/sitemap-0.xml</loc></sitemap>
+<sitemap><loc>https://shopskey.com/sitemap.xml</loc></sitemap>
+</sitemapindex>

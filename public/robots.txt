@@ -1,5 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://shopskey.com
 
+# Sitemaps
 Sitemap: https://shopskey.com/sitemap.xml
