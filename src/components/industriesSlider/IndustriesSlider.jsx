@@ -58,6 +58,7 @@ const IndustriesSlider = ({
                     width={120}
                     height={120}
                     className="rounded img-fluid"
+                     priority
                   />
                 </div>
                 <div className="content">

@@ -97,6 +97,7 @@ const HeroBanner2 = ({
                         alt={logo.alt}
                         width={150}
                         height={80}
+                         priority
                       />
                     </SwiperSlide>
                   ))}

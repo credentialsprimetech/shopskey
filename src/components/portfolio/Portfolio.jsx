@@ -77,6 +77,7 @@ const Portfolio = ({
                 width={400}
                 height={250}
                 className="w-100 h-auto"
+                 priority
               />
             </a>
           </SwiperSlide>

@@ -1,5 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "swiper/css";
+
 import Header from "@/components/header/Header";
 import FooterSection from "@/components/footerSection/FooterSection";
 import AosInitializer from "@/components/AosInitializer";
@@ -7,7 +9,14 @@ import ScrollToTop from "@/components/scrollToTop/ScrollToTop";
 import Script from "next/script";
 import { ModalProvider } from "./utils/Context/ModalContext";
 import LeadModal from "@/components/leadModal/LeadModal";
+import { Poppins } from "next/font/google";
 
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -25,7 +34,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}
+    >
       <head>
         {/* Font Awesome for icons */}
         <link
@@ -43,7 +55,7 @@ export default function RootLayout({ children }) {
         <link rel="stylesheet" href="/assets/css/animate.css" />
         <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/css/meanmenu.css" />
-        <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+        {/* <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" /> */}
         <link rel="stylesheet" href="/assets/css/nice-select.css" />
         <link rel="stylesheet" href="/assets/css/icomon.css" />
         <link rel="stylesheet" href="/assets/css/main.css"></link>
@@ -69,7 +81,7 @@ export default function RootLayout({ children }) {
         <Script
           id="ze-snippet"
           src="https://static.zdassets.com/ekr/snippet.js?key=7ad04258-0f0b-4235-8598-c01e43c85815"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         <Script id="zendesk-init" strategy="afterInteractive">
           {`

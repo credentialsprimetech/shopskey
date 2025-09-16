@@ -74,7 +74,6 @@ const caseStudiesData = [
     logoLink: "https://ourcarehomehealth.com/",
     projectUrl: "https://ourcarehomehealth.com/",
     marginTopChecking: true,
-
   },
   {
     image: "/images/caseStudies/image-7-maxine-wilson.png",
@@ -96,7 +95,6 @@ const caseStudiesData = [
     logoLink: "https://ourcarehospice.com/",
     projectUrl: "https://ourcarehospice.com/",
     marginTopChecking: true,
-
   },
   {
     image: "/images/caseStudies/image-1-hospice-of-gentle-care.png",
@@ -118,7 +116,6 @@ const caseStudiesData = [
     logoLink: "https://www.latzifloors.com.au/",
     projectUrl: "https://www.latzifloors.com.au/",
     marginTopChecking: true,
-
   },
   {
     image: "/images/caseStudies/image-4-villa-sunset-waters.png",
@@ -181,7 +178,7 @@ const processStages = [
   //   },
 ];
 const HomePage = () => {
-    const { toggleModal } = useModal();
+  const { toggleModal } = useModal();
 
   return (
     <>

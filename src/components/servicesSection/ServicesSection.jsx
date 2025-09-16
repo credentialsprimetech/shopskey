@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const ServicesSection = ({ heading, description, services }) => {
   return (
@@ -20,6 +20,7 @@ const ServicesSection = ({ heading, description, services }) => {
                 alt={service.title}
                 width={400}
                 height={250}
+                priority
                 className="card-image"
               />
               <div className="overlay">
@@ -83,7 +84,9 @@ const ServicesSection = ({ heading, description, services }) => {
           left: 0;
           right: 0;
           bottom: 0;
-          {/* background: rgba(0, 0, 0, 0.7); */}
+           {
+            /* background: rgba(0, 0, 0, 0.7); */
+          }
           color: #fff;
           opacity: 0;
           transition: opacity 0.3s ease;

@@ -57,6 +57,7 @@ const PortfolioGrid = ({ header, subheader, description, images = [] }) => {
                 width={300}
                 height={220}
                 className="img-fluid rounded"
+                 priority
               />
             </a>
           </div>
@@ -80,6 +81,7 @@ const PortfolioGrid = ({ header, subheader, description, images = [] }) => {
                   width={800}
                   height={600}
                   style={{ width: "100%", height: "auto", borderRadius: "12px" }}
+                   priority
                 />
               </div>
             </div>

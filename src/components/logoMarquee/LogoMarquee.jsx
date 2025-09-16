@@ -40,6 +40,7 @@ const LogoCarousel = ({
             width={logoWidth}
             height={height}
             style={{ flexShrink: 0 }}
+             priority
           />
         ))}
       </div>
