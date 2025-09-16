@@ -147,8 +147,8 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="//static.zdassets.com" />
         <link
           rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          integrity="sha512-papNm6O+bSr5z5UB8nE9vrFica8tWHZcizxgxYkWwaRM42gnikI6jneih/7gToYtL6vhfVqlhK/SXxP+0U6FZw=="
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+          integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
           crossorigin="anonymous"
           referrerpolicy="no-referrer"
         />
