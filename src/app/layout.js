@@ -138,6 +138,10 @@ export default function RootLayout({ children }) {
       className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable}`}
     >
       <head>
+        <meta
+          name="google-site-verification"
+          content="KU814iANfI6OVHVGoCLupslE9aVJbFHXvtiCW0b6n5s"
+        />
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
