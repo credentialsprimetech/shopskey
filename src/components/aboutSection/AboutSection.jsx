@@ -14,7 +14,11 @@ const SectionRow = ({
   const isLTR = layoutDirection === "ltr";
 
   return (
-    <div className={`abtwhy-row ${isLTR ? "abtwhy-top flex-row-reverse" : "abtwhy-bottom"}`}>
+    <div
+      className={`abtwhy-row ${
+        isLTR ? "abtwhy-top flex-row-reverse" : "abtwhy-bottom"
+      }`}
+    >
       {/* Text Column */}
       <div
         className={`abtwhy-col ${
