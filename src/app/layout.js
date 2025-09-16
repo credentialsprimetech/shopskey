@@ -143,6 +143,7 @@ export default function RootLayout({ children }) {
           content="KU814iANfI6OVHVGoCLupslE9aVJbFHXvtiCW0b6n5s"
         />
         <meta name="yandex-verification" content="609cfcd8e39fb3c1" />
+        <meta name="msvalidate.01" content="EF9BF7CB4F107C6D3817FC8DEDF6CA92" />
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
