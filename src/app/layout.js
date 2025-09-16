@@ -142,6 +142,7 @@ export default function RootLayout({ children }) {
           name="google-site-verification"
           content="KU814iANfI6OVHVGoCLupslE9aVJbFHXvtiCW0b6n5s"
         />
+        <meta name="yandex-verification" content="609cfcd8e39fb3c1" />
         {/* DNS Prefetch */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
         <link rel="dns-prefetch" href="//cdnjs.cloudflare.com" />
