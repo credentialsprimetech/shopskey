@@ -11,7 +11,6 @@ const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
   const { toggleModal } = useModal();
 
-
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -43,13 +42,31 @@ const Header = () => {
     { href: "/services/digital-marketing", title: "Digital Marketing" },
     { href: "/services/app-development", title: "App Development" },
     { href: "/services/ios-app-development", title: "iOS App Development" },
-    { href: "/services/android-app-development", title: "Android App Development" },
-    { href: "/services/flutter-app-development", title: "Flutter App Development" },
+    {
+      href: "/services/android-app-development",
+      title: "Android App Development",
+    },
+    {
+      href: "/services/flutter-app-development",
+      title: "Flutter App Development",
+    },
     { href: "/services/web-development", title: "Web Development" },
-    { href: "/services/custom-web-development", title: "Custom Web Development" },
-    { href: "/services/wordpress-web-development", title: "WordPress Web Development" },
-    { href: "/services/ecommerce-web-development", title: "Ecommerce Web Development" },
-    { href: "/services/shopify-web-development", title: "Shopify Web Development" },
+    {
+      href: "/services/custom-web-development",
+      title: "Custom Web Development",
+    },
+    {
+      href: "/services/wordpress-web-development",
+      title: "WordPress Web Development",
+    },
+    {
+      href: "/services/ecommerce-web-development",
+      title: "Ecommerce Web Development",
+    },
+    {
+      href: "/services/shopify-web-development",
+      title: "Shopify Web Development",
+    },
   ];
 
   return (
@@ -64,9 +81,10 @@ const Header = () => {
               <Link href="/">
                 <Image
                   src="/assets/img/logo/white-logo.png"
-                  alt="Shopskey Logo"
-                  width={150}
-                  height={50}
+                  alt="Logo"
+                  width={200}
+                  height={100}
+                  style={{ height: "auto", width: "auto" }}
                   priority
                 />
               </Link>

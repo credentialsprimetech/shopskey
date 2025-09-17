@@ -212,7 +212,7 @@ const HomePage = () => {
       />
       <ServicesSection
         heading="Our Core Services"
-        description="We deliver web and app solutions designed to empower your business and establish a strong online presence."
+        description="We delivers web and app solutions designed to empower your business and establish a strong online presence."
         services={servicesData}
       />
       <CaseStudiesSection caseStudies={caseStudiesData} />

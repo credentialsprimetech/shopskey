@@ -1,7 +1,7 @@
 import { Geist, Geist_Mono, Poppins } from "next/font/google";
 import "./globals.css";
 import "swiper/css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "@/components/header/Header";
 import FooterSection from "@/components/footerSection/FooterSection";
 import AosInitializer from "@/components/AosInitializer";
@@ -9,6 +9,7 @@ import ScrollToTop from "@/components/scrollToTop/ScrollToTop";
 import Script from "next/script";
 import { ModalProvider } from "./utils/Context/ModalContext";
 import LeadModal from "@/components/leadModal/LeadModal";
+import WebVitalsObserver from "@/components/webVitalsObserver/WebVitalsObserver";
 
 // Optimized font loading with preload and display swap
 const poppins = Poppins({
@@ -97,7 +98,7 @@ export const metadata = {
   verification: {
     google: "KU814iANfI6OVHVGoCLupslE9aVJbFHXvtiCW0b6n5s",
     yandex: "609cfcd8e39fb3c1",
-    // yahoo: "your-yahoo-verification-code",
+    yahoo: "EF9BF7CB4F107C6D3817FC8DEDF6CA92",
   },
 
   alternates: {
@@ -112,10 +113,10 @@ export const metadata = {
   icons: {
     icon: "/images/fav.png",
     shortcut: "/images/fav.png",
-    apple: "/images/apple-touch-icon.png",
+    apple: "/images/fav.png",
     other: {
       rel: "apple-touch-icon-precomposed",
-      url: "/images/apple-touch-icon-precomposed.png",
+      url: "/images/fav.png",
     },
   },
 };
@@ -149,25 +150,8 @@ export default function RootLayout({ children }) {
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
           integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-          crossorigin="anonymous"
-          referrerpolicy="no-referrer"
-        />
-
-        {/* Preconnect */}
-        <link
-          rel="preconnect"
-          href="https://fonts.googleapis.com"
-          crossOrigin=""
-        />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          rel="preconnect"
-          href="https://cdnjs.cloudflare.com"
-          crossOrigin=""
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
         />
 
         {/* Critical CSS */}
@@ -187,32 +171,11 @@ export default function RootLayout({ children }) {
             rel="preload"
             href={`/assets/css/${css}`}
             as="style"
-            // onLoad="this.onload=null;this.rel='stylesheet'"
+            onLoad="this.onload=null;this.rel='stylesheet'"
           />
         ))}
-        <noscript>
-          <link rel="stylesheet" href="/assets/css/animate.css" />
-          <link rel="stylesheet" href="/assets/css/magnific-popup.css" />
-          <link rel="stylesheet" href="/assets/css/meanmenu.css" />
-          <link rel="stylesheet" href="/assets/css/nice-select.css" />
-          <link rel="stylesheet" href="/assets/css/icomon.css" />
-        </noscript>
 
         {/* Font Awesome */}
-        <link
-          rel="preload"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-          as="style"
-          onLoad="this.onload=null;this.rel='stylesheet'"
-          crossOrigin="anonymous"
-        />
-        <noscript>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-            crossOrigin="anonymous"
-          />
-        </noscript>
 
         {/* Organization Schema */}
         <script
@@ -273,12 +236,11 @@ export default function RootLayout({ children }) {
           </footer>
         </ModalProvider>
 
-        {/* Core Web Vitals */}
         <Script
-          id="web-vitals"
           src="https://unpkg.com/web-vitals@3/dist/web-vitals.attribution.iife.js"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
+        <WebVitalsObserver />
 
         {/* Google Analytics */}
         <Script
@@ -293,7 +255,7 @@ export default function RootLayout({ children }) {
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'GA_MEASUREMENT_ID', {
+              gtag('config', 'G-WF3K1TMHK4', {
                 page_title: document.title,
                 page_location: window.location.href,
                 send_page_view: true
