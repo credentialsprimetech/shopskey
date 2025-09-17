@@ -1,0 +1,8 @@
+.home-top-banner-heading {
+  font-size: clamp(28px, 5vw, 46px) !important;
+  /* line-height: 1.3;/assets/img/Logo9.svg */
+}
+
+.home-top-banner-right-none{
+    display: none !important;
+}

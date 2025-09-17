@@ -4,7 +4,8 @@ import Link from "next/link";
 import { useCallback, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-
+import "./HeroBanner.css";
+import { usePathname } from "next/navigation";
 export default function HeroBanner({
   title = "Leading Web & App Development Services",
   subtitle = `Looking to expand online or launch a new app? Shopskey designs custom websites and powerful mobile applications designed to boost your brand and effectively reach your customers. We turn your ideas into digital realities that drive results.`,
@@ -22,6 +23,8 @@ export default function HeroBanner({
   sectionProps = {},
   turstImage = false,
 }) {
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
   // ✅ Init AOS
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
@@ -160,7 +163,9 @@ export default function HeroBanner({
               )}
             </div>
             <div
-              className="home-top-banner-right"
+              className={`home-top-banner-right ${
+                isHomePage ? "home-top-banner-right-none" : ""
+              }`}
               data-aos="fade-left" // 👈 AOS animation
             >
               {right}

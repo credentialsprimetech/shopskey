@@ -1,16 +1,16 @@
-'use client';
+"use client";
 
-import React from 'react';
-import Image from 'next/image';
+import React from "react";
+import Image from "next/image";
 
 const LogoCarousel = ({
   logos = [],
   logoWidth = 150,
-  height = 80,
+  logoheight = 80,
   gap = 32,
   speedSec = 20,
-  bgColor = '#efefef',
-  className = '',
+  bgColor = "#efefef",
+  className = "",
 }) => {
   const repeatedLogos = [...logos, ...logos]; // Duplicate for infinite scroll
 
@@ -18,16 +18,16 @@ const LogoCarousel = ({
     <div
       className={`carousel-container ${className}`}
       style={{
-        overflow: 'hidden',
-        width: '100%',
+        overflow: "hidden",
+        width: "100%",
         backgroundColor: bgColor,
-        height: `${height}px`,
+        height: `${logoheight}px`,
       }}
     >
       <div
         className="carousel-track"
         style={{
-          display: 'flex',
+          display: "flex",
           animation: `scroll ${speedSec}s linear infinite`,
           gap: `${gap}px`,
         }}
@@ -38,9 +38,9 @@ const LogoCarousel = ({
             src={src}
             alt={`Logo ${index + 1}`}
             width={logoWidth}
-            height={height}
-            style={{ flexShrink: 0 }}
-             priority
+            height={logoheight} // height 0 kar do
+            // style={{ flexShrink: 0, height: "auto" }}
+            priority
           />
         ))}
       </div>
