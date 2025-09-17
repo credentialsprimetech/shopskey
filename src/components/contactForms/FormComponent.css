@@ -76,9 +76,14 @@ textarea {
 .request-form textarea.form-control {
   background: rgba(255, 255, 255, 0);
 }
-.form-control{
-    color: #fff !important;
+.form-control {
+  color: #fff !important;
 }
 .form-control:focus {
   color: #000 !important    ; /* focus hone ke baad text black */
+}
+@media (max-width: 768px) {
+  .request-form {
+    margin: 0px ;
+  }
 }

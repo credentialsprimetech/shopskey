@@ -50,7 +50,7 @@ const FormComponent = ({
     }
   };
   return (
-    <div className="request-form">
+    <div className="request-form huz-request-form">
       <div className="title text-center">
         <h4 style={{ color: "#FC501B" }}>{subTitle}</h4>
       </div>
