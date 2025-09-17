@@ -196,7 +196,7 @@ const HomePage = () => {
           // },
         ]}
         bgColor="#111827"
-        bgImage="https://clientproject.site/tech/images/SliderBanner.jpg"
+        bgImage="/images/SliderBanner.jpg"
         bgPosition="center"
         bgSize="cover"
         overlayBg="rgba(0,0,0,0.4)"
