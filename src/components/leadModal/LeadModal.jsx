@@ -47,20 +47,31 @@ export default function LeadModal() {
 
     setIsSubmitting(true);
     setFormStatus("");
-
     try {
-      const response = await sendEmail(data);
-      console.log("Form submission success:", response);
+      // PHP ko request bhejna
+      const response = await fetch("/form-handler.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
 
-      setFormStatus(
-        "Success! Your request has been submitted. Check your email for confirmation."
-      );
-      reset();
+      const result = await response.json();
+      console.log("Form submission response:", result);
 
-      setTimeout(() => {
-        toggleModal();
-        setFormStatus("");
-      }, 3000);
+      if (result.status === "success") {
+        setFormStatus(
+          "Success! Your request has been submitted. Check your email for confirmation."
+        );
+
+        reset();
+
+        setTimeout(() => {
+          toggleModal();
+          setFormStatus("");
+        }, 3000);
+      } else {
+        setFormStatus("Failed: " + result.message);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setFormStatus("Failed to submit. Please try again later.");

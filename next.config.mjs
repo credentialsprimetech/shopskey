@@ -1,8 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+  trailingSlash: true,
   reactStrictMode: true,
 
   images: {
+    unoptimized: true,
     remotePatterns: [
       { protocol: "https", hostname: "www.shopskey.com" },
       { protocol: "https", hostname: "shopskey.com" },
@@ -28,14 +31,15 @@ const nextConfig = {
       {
         source: "/:all*(svg|jpg|jpeg|png|webp|avif|ico|woff2|woff|ttf|eot)",
         headers: [
-          { key: "Cache-Control", value: "public, max-age=31536000, immutable" },
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
         ],
       },
       {
         source: "/:all*(css|js)",
-        headers: [
-          { key: "Cache-Control", value: "public, max-age=86400" },
-        ],
+        headers: [{ key: "Cache-Control", value: "public, max-age=86400" }],
       },
       {
         source: "/(.*)",
@@ -73,8 +77,6 @@ const nextConfig = {
   env: {
     SITE_URL: process.env.SITE_URL || "https://shopskey.com",
   },
-
-  output: "standalone",
 
   typescript: {
     ignoreBuildErrors: false,

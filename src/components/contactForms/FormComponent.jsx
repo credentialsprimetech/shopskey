@@ -22,26 +22,34 @@ const FormComponent = ({
   // Submit handler
   const onSubmit = async (data) => {
     console.log(data);
-    
+
     setIsSubmitting(true);
     setFormStatus("");
 
     try {
-      // Call the sendEmail function and pass the form data
-      const response = await sendEmail(data);
-      console.log("Form submission success:", response);
+      // PHP ko request bhejna
+      const response = await fetch("/form-handler.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
 
-      setFormStatus(
-        "Success! Your request has been submitted. Check your email for confirmation."
-      );
+      const result = await response.json();
+      console.log("Form submission response:", result);
 
-      // Reset form after successful submission
-      reset();
+      if (result.status === "success") {
+        setFormStatus(
+          "Success! Your request has been submitted. Check your email for confirmation."
+        );
 
-      // Auto close modal after 3 seconds
-      setTimeout(() => {
-        setFormStatus("");
-      }, 3000);
+        reset();
+
+        setTimeout(() => {
+          setFormStatus("");
+        }, 3000);
+      } else {
+        setFormStatus("Failed: " + result.message);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setFormStatus("Failed to submit. Please try again later.");
@@ -49,6 +57,7 @@ const FormComponent = ({
       setIsSubmitting(false);
     }
   };
+
   return (
     <div className="request-form huz-request-form">
       <div className="title text-center">
@@ -70,7 +79,9 @@ const FormComponent = ({
           {formStatus && (
             <div
               className={`alert ${
-                formStatus.includes("Success") ? "alert-success" : "alert-danger"
+                formStatus.includes("Success")
+                  ? "alert-success"
+                  : "alert-danger"
               } mb-3`}
             >
               {formStatus}

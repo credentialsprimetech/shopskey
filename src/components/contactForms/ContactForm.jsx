@@ -14,33 +14,35 @@ const ContactForm = () => {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-    setIsSubmitting(true);
-    setFormStatus("");
+  // const onSubmit = async (data) => {
+  //   setIsSubmitting(true);
+  //   setFormStatus("");
 
-    try {
-      // Call the sendEmail function and pass the form data
-      const response = await sendEmail(data);
-      console.log("Form submission success:", response);
+  //   try {
+  //     const response = await fetch("/form-handler.php", {
+  //       method: "POST",
+  //       body: new URLSearchParams(data),
+  //     });
 
-      setFormStatus(
-        "Success! Your request has been submitted. Check your email for confirmation."
-      );
+  //     const result = await response.json();
 
-      // Reset form after successful submission
-      reset();
+  //     if (result.status === "success") {
+  //       setFormStatus("Success! " + result.message);
+  //       reset();
 
-      // Auto close modal after 3 seconds
-      setTimeout(() => {
-        setFormStatus("");
-      }, 3000);
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      setFormStatus("Failed to submit. Please try again later.");
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
+  //       setTimeout(() => {
+  //         setFormStatus("");
+  //       }, 3000);
+  //     } else {
+  //       setFormStatus("Failed: " + result.message);
+  //     }
+  //   } catch (error) {
+  //     console.error("Error submitting form:", error);
+  //     setFormStatus("Failed to submit. Please try again later.");
+  //   } finally {
+  //     setIsSubmitting(false);
+  //   }
+  // };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="contact-form-fields">

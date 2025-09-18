@@ -24,22 +24,35 @@ const FooterSection = () => {
   }, []);
 
   const onSubmit = async (data) => {
+    console.log(data);
+
     setIsSubmitting(true);
     setFormStatus("");
 
     try {
-      const response = await sendEmail(data);
-      console.log("Form submission success:", response);
+      // PHP ko request bhejna
+      const response = await fetch("/form-handler.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
 
-      setFormStatus(
-        "Success! Your email has been submitted. Check your inbox for confirmation."
-      );
+      const result = await response.json();
+      console.log("Form submission response:", result);
 
-      reset();
+      if (result.status === "success") {
+        setFormStatus(
+          "Success! Your request has been submitted. Check your email for confirmation."
+        );
 
-      setTimeout(() => {
-        setFormStatus("");
-      }, 3000);
+        reset();
+
+        setTimeout(() => {
+          setFormStatus("");
+        }, 3000);
+      } else {
+        setFormStatus("Failed: " + result.message);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setFormStatus("Failed to submit. Please try again later.");
@@ -47,7 +60,6 @@ const FooterSection = () => {
       setIsSubmitting(false);
     }
   };
-
   // Footer data
   const footerData = {
     contact: {
@@ -128,7 +140,11 @@ const FooterSection = () => {
           </div>
 
           {/* Services */}
-          <div className="custfooter-column" data-aos="fade-up" data-aos-delay="200">
+          <div
+            className="custfooter-column"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <h4>Services</h4>
             <ul className="custfooter-list">
               {footerData.services.map((service, index) => (
@@ -140,7 +156,11 @@ const FooterSection = () => {
           </div>
 
           {/* Newsletter + Social */}
-          <div className="custfooter-column" data-aos="fade-up" data-aos-delay="400">
+          <div
+            className="custfooter-column"
+            data-aos="fade-up"
+            data-aos-delay="400"
+          >
             <h4>Stay Connected</h4>
             <p>
               We’d love to hear from you! Reach out and let’s start building
@@ -221,11 +241,7 @@ const FooterSection = () => {
             {footerData.footerLinks.map((link, index) => (
               <li key={index}>
                 {link.link.startsWith("http") ? (
-                  <a
-                    href={link.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
+                  <a href={link.link} target="_blank" rel="noopener noreferrer">
                     {link.name}
                   </a>
                 ) : (

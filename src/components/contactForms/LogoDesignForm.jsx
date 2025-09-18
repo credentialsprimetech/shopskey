@@ -28,25 +28,34 @@ const LogoDesignForm = () => {
   };
 
   const onSubmit = async (data) => {
- 
+    console.log(data);
 
     setIsSubmitting(true);
     setFormStatus("");
 
     try {
-      const response = await sendEmail(data);
-      console.log("Form submission success:", response);
+      const response = await fetch("/form-handler.php", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(data).toString(),
+      });
 
-      setFormStatus(
-        "Success! Your request has been submitted. Check your email for confirmation."
-      );
+      const result = await response.json();
+      console.log("Form submission response:", result);
 
-      reset();
-      setStep(1); // ✅ Reset back to Step 1
+      if (result.status === "success") {
+        setFormStatus(
+          "Success! Your request has been submitted. Check your email for confirmation."
+        );
 
-      setTimeout(() => {
-        setFormStatus("");
-      }, 3000);
+        reset();
+
+        setTimeout(() => {
+          setFormStatus("");
+        }, 3000);
+      } else {
+        setFormStatus("Failed: " + result.message);
+      }
     } catch (error) {
       console.error("Error submitting form:", error);
       setFormStatus("Failed to submit. Please try again later.");
@@ -91,7 +100,9 @@ const LogoDesignForm = () => {
                 className="logo-form-input"
                 id="logoDetail"
                 placeholder="What type of logo do you want?"
-                {...register("details", { required: "Logo detail is required" })}
+                {...register("details", {
+                  required: "Logo detail is required",
+                })}
               />
               {errors.details && (
                 <p className="error-text">{errors.details.message}</p>
